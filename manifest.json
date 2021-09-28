@@ -4,12 +4,11 @@
   "description": "This extension is made to remind you to change your passwords in Chrome regularly and to generate a new one.",
   "version": "1.0",
   "browser_action": {
-    "default_icon": "image/icon.png",
-    "default_popup": "src/popup.html"
+    "default_icon": "/image/icon.png",
+    "default_popup": "/src/menu.html"
   },
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/"
-  ],
-  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
+  ]
 }
