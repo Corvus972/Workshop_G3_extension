@@ -15,19 +15,19 @@ function StrengthChecker(PasswordParameter) {
         strengthBadge.style.backgroundColor = "green";
         strengthBadge.innerHTML  = "Strong password ! <span>&#128513;</span>";
         preventionText.style.color = "green";
-        preventionText.textContent = "Password is perfect ! \n You can go to war.";
+        preventionText.textContent = "Your password is perfect ! \n You're ready for war.";
 
     } else if (mediumPassword.test(PasswordParameter)) {
         strengthBadge.style.backgroundColor = 'orange';
         strengthBadge.innerHTML  = 'Medium password ! <span>&#128533;</span>';
         preventionText.style.color = "orange";
-        preventionText.textContent = "Password not safe ! \n You can add a special character to secure it.";
+        preventionText.textContent = "Your password is safe but not enough ! \n You can add a special character to ensecure it.";
 
     } else {
         strengthBadge.style.backgroundColor = 'red';
         strengthBadge.innerHTML  = 'Weak password ! <span>&#128549;</span>';
         preventionText.style.color = "red";
-        preventionText.textContent = "Password too weak ! \n You need at least a lowercase letter, an uppercase letter and a number.";
+        preventionText.textContent = "Your password is too weak ! \n You need at least a lowercase letter, an uppercase letter and a number.";
     }
 }
 
