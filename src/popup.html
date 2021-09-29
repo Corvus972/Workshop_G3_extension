@@ -5,6 +5,11 @@
     <!-- Bootstrap 5 link -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- CSS Styling -->
     <style>
       body {
@@ -20,21 +25,45 @@
             display: none; 
             text-align :center;
         }
+        .persona {
+          margin: 5px;
+        }
+        .glyphicon-eye-open2 {
+            opacity: 0.8;
+        }
+
+        .glyphicon-eye-open2:hover {
+            opacity: 1;
+            transition-duration: 0.3s;
+        }
+        .loginFormLine {
+            display: inline-flex;
+        }
+        .personax {
+            margin: 1px;
+        }
     </style>
 </head>
   <body>
-      <div class="text-danger justify-content-center">
-          <h4>
-              Password Reminder
-          </h4>
-          <input type="text" placeholder="Type your password" id="PassEntry" class="form-control passwordInput">
-          
-          <span id="StrengthDisp" class="badge displayBadge">Weak</span>
-          <br>
-          <p id="prevention_text"></p>
-          <br>
-      </div>  
-      <span>A traduire ! Vous pouvez generer un mot de passe</span>   
+    <div class="persona">
+        <div class="text-danger">
+            <h4 class="text-center">
+                Nom a definir
+            </h4>
+            <br>
+            <div class="loginFormLine">
+                <input style="width: 250px" type="password" placeholder="Type your password" id="PassEntry" class="form-control passwordInput">
+                    <button type="button" class="btn btn-danger personax" type="button" title="Voir ou cacher le mot de passe">
+                        <span class="glyphicon glyphicon-eye-open glyphicon-eye-open2"></span>
+                    </button>
+            </div>
+            <span id="StrengthDisp" class="badge displayBadge">Weak</span>
+        </div>  
+        <div class="text-info">
+            <p id="prevention_text"></p>
+        </div>
+        <span>A traduire ! Vous pouvez generer un mot de passe</span> 
+    </div> 
   </body>
   <script src="pwned.js"></script>
 </html>
