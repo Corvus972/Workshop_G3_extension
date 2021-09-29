@@ -4,8 +4,8 @@ let timeout;
 
 // traversing the DOM and getting the input and span using their IDs
 
-let password = document.getElementById('PassEntry')
-let strengthBadge = document.getElementById('StrengthDisp')
+let password = document.getElementById('PassEntry');
+let strengthBadge = document.getElementById('StrengthDisp');
 
 // The strong and weak password Regex pattern checker
 
@@ -52,4 +52,3 @@ password.addEventListener("input", () => {
         strengthBadge.style.display = 'none'
     }
 });
-
