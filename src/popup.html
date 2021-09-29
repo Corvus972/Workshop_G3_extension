@@ -12,18 +12,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- CSS Styling -->
     <style>
-      body {
-          min-width: 300px; /* your desired width */
-          min-height: 400px;
-          }
-        .passwordInput{
-            text-align :center;
+        body {
+            min-width: 300px; /* your desired width */
+            min-height: 400px;
         }
 
-        .displayBadge{
-            margin-top: 5%; 
+        .passwordInput {
+            text-align: center;
+        }
+
+        .displayBadge {
+            margin-top: 20px;
+            margin-bottom: 10px; 
             display: none; 
-            text-align :center;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .badge {
+            border-radius: 3px;
+            font-size: 18px;
+        }
+
+        .pwdTitle {
+            text-align: center;
+            margin: 10px 0;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        #prevention_text {
+            text-align: center;
+            font-weight: 800;
+            white-space: break-spaces;
         }
         .persona {
           margin: 5px;
@@ -45,6 +68,15 @@
     </style>
 </head>
   <body>
+      <div class="text-danger justify-content-center">
+          <h4 class="pwdTitle">Password Reminder</h4>
+          <input type="password" placeholder="Type your password" id="PassEntry" class="form-control passwordInput">
+          
+          <span id="StrengthDisp" class="badge displayBadge"></span>
+          <p id="prevention_text"></p>
+          <br>
+      </div>  
+      <!-- <span>You can generate a password here.</span>    -->
     <div class="persona">
         <div class="text-danger">
             <h4 class="text-center">
