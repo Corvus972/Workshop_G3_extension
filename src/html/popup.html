@@ -11,6 +11,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <!-- CSS Styling -->
+    
     <style>
         body {
             min-width: 300px; /* your desired width */
@@ -69,14 +70,15 @@
 </head>
 
   <body> 
+    <a href="menu.html" class="text-decoration-none"><i class="d-inline material-icons">arrow_back</i></a>
     <div class="persona">
+        <h4 class="text-center">
+            Nom a definir
+        </h4>
         <div class="text-danger">
-            <h4 class="text-center">
-                Nom a definir
-            </h4>
             <br>
             <div class="loginFormLine">
-                <input style="width: 250px" type="password" placeholder="Type your password" id="PassEntry" class="form-control passwordInput">
+                <input style="width: 250px" type="password" placeholder="Type your password" id="PassEntry" class="form-control passwordInput" autofocus="autofocus" maxlength="20">
                     <button type="button" class="btn btn-danger personax" type="button" title="Voir ou cacher le mot de passe">
                         <span class="glyphicon glyphicon-eye-open glyphicon-eye-open2"></span>
                     </button>
@@ -86,9 +88,8 @@
         <div class="text-info">
             <p id="prevention_text"></p>
         </div>
-        <span>A traduire ! Vous pouvez generer un mot de passe</span> 
     </div> 
 
   </body>
-  <script src="pwned.js"></script>
+  <script src="../js/pwned.js"></script>
 </html>
