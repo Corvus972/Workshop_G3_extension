@@ -1,35 +1,34 @@
-// timeout before a callback is called
 
+// timeout before a callback is called
 let timeout;
 
 // traversing the DOM and getting the input and span using their IDs
-
-let password = document.getElementById('PassEntry');
+let password      = document.getElementById('PassEntry');
 let strengthBadge = document.getElementById('StrengthDisp');
 
-// The strong and weak password Regex pattern checker
 let mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,}))');
-let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
-
+let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})'); 
 function StrengthChecker(PasswordParameter) {
     // We then change the badge's color and text based on the password strength
     let preventionText = document.getElementById("prevention_text");
     if (strongPassword.test(PasswordParameter)) {
         strengthBadge.style.backgroundColor = "green";
-        strengthBadge.textContent  = 'Strong password !';
+        strengthBadge.innerHTML  = "Strong password ! <span>&#128513;</span>";
+        preventionText.style.color = "green";
         preventionText.textContent = "Password is perfect ! \n You can go to war.";
 
-    } else if (mediumPassword.test(PasswordParameter)){
-        strengthBadge.style.backgroundColor = 'blue';
-        strengthBadge.textContent  = 'Medium password !';
+    } else if (mediumPassword.test(PasswordParameter)) {
+        strengthBadge.style.backgroundColor = 'orange';
+        strengthBadge.innerHTML  = 'Medium password ! <span>&#128533;</span>';
+        preventionText.style.color = "orange";
         preventionText.textContent = "Password not safe ! \n You can add a special character to secure it.";
 
     } else {
         strengthBadge.style.backgroundColor = 'red';
-        strengthBadge.textContent  = 'Weak password ! :(';
-        preventionText.textContent = "Password too weak ! \n You need a lowercase letter, an uppercase letter and a number.";
+        strengthBadge.innerHTML  = 'Weak password ! <span>&#128549;</span>';
+        preventionText.style.color = "red";
+        preventionText.textContent = "Password too weak ! \n You need at least a lowercase letter, an uppercase letter and a number.";
     }
-    
 }
 
 // Adding an input event listener when a user types to the  password input 
