@@ -14,19 +14,19 @@ document.querySelectorAll('.form-range').forEach(item => {
         let s = document.getElementById("caractereSpe").value;
 
         if (l == 2 && m == 2 && n == 2 && s == 2) {
-            document.getElementById("picturePasswordGenerator").src = "../image/5.png";
+            document.getElementById("picturePasswordGenerator").src = "../../image/5.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 1"
         } else if (l > 2 && l <= 4 && m > 2 && m <= 4 && n > 2 && n <= 4 && s > 2 && s <= 4) {
-            document.getElementById("picturePasswordGenerator").src = "../image/4.png";
+            document.getElementById("picturePasswordGenerator").src = "../../image/4.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 2"
         } else if (l > 4 && l < 6 && m > 4 && m < 6 && n > 4 && n < 6 &&  s > 4 && s < 6) {
-            document.getElementById("picturePasswordGenerator").src = "../image/3.png";
+            document.getElementById("picturePasswordGenerator").src = "../../image/3.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 3"
         } else if (l > 6 && l<8 && m > 6 && m <8 && n > 6 && n <8  && s > 6 && s <8 ) {
-            document.getElementById("picturePasswordGenerator").src = "../image/2.png";
+            document.getElementById("picturePasswordGenerator").src = "../../image/2.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 4"
         }else if (l > 8 && m > 8 && n > 8 && s > 8) {
-            document.getElementById("picturePasswordGenerator").src = "../image/1.png";
+            document.getElementById("picturePasswordGenerator").src = "../../image/1.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 5"
         }
     })

@@ -2,10 +2,12 @@
 <html lang="en">
 
   <head>
+      
     <!-- Bootstrap 5 link -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- CSS Styling -->
+
     <style>
       body {
           min-width: 300px; /* your desired width */
@@ -23,18 +25,20 @@
     </style>
 </head>
   <body>
-      <div class="text-danger justify-content-center">
-          <h4>
-              Password Reminder
-          </h4>
-          <input type="text" placeholder="Type your password" id="PassEntry" class="form-control passwordInput">
-          
-          <span id="StrengthDisp" class="badge displayBadge">Weak</span>
-          <br>
-          <p id="prevention_text"></p>
-          <br>
+      <div class="justify-content-center">
+          <div class="mb-5">
+            <a href="menu.html" class="text-decoration-none"><i class="d-inline material-icons">arrow_back</i></a>
+            <h4 class="d-inline d-flex text-dark justify-content-center">
+                Domain Checker
+            </h4>
+          </div>
+
+          <div class="alert" role="alert"></div>
+
+          <input type="text" placeholder="Type a domain" id="domainEntry" 
+          class="form-control passwordInput">
       </div>  
-      <span>A traduire ! Vous pouvez generer un mot de passe</span>   
+      
   </body>
-  <script src="pwned.js"></script>
+  <script src="../js/domain-checker.js"></script>
 </html>
