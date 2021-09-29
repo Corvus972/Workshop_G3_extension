@@ -49,7 +49,7 @@ const displayMessage = (good, data=null) => {
             myAlert[0].innerHTML = "Reliable mail";
         } else {
             myAlert[0].className = "alert alert-danger text-center"; 
-            myAlert[0].innerHTML = "Risky mail";
+            myAlert[0].innerHTML = "your email has been leaked";
         }
         
     } else {
