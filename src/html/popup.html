@@ -20,15 +20,21 @@
 
         .passwordInput {
             text-align: center;
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+            border-top-left-radius: 3px !important;
+            border-bottom-left-radius: 3px !important;
+        }
+        
+        .form-control {
+            height: 36px !important;
         }
 
         .displayBadge {
-            margin-top: 20px;
-            margin-bottom: 10px; 
+            margin: 20px 0 10px;
             display: none; 
             text-align: center;
-            margin-left: 10px;
-            margin-right: 10px;
+            padding: 8px 0;
         }
 
         .badge {
@@ -60,11 +66,29 @@
             opacity: 1;
             transition-duration: 0.3s;
         }
+
         .loginFormLine {
             display: inline-flex;
         }
+
         .personax {
             margin: 1px;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            border-top-right-radius: 3px !important;
+            border-bottom-right-radius: 3px !important;
+            border: solid 1px #000;
+        }
+
+        .material-icons {
+            font-size: 35px;
+            color: #000;
+            opacity: 0.7;
+        }
+
+        .material-icons:hover {
+            opacity: 1;
+            transition-duration: 0.2s !important;
         }
     </style>
 </head>
@@ -72,7 +96,7 @@
   <body> 
     <a href="menu.html" class="text-decoration-none"><i class="d-inline material-icons">arrow_back</i></a>
     <div class="persona">
-        <h4 class="text-center">
+        <h4 class="text-center pwdTitle">
             Nom a definir
         </h4>
         <div class="text-danger">

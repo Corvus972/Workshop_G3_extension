@@ -1,4 +1,3 @@
-
 // timeout before a callback is called
 let timeout;
 
