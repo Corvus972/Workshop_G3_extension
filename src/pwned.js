@@ -3,7 +3,8 @@
 let timeout;
 
 // traversing the DOM and getting the input and span using their IDs
-let password      = document.getElementById('PassEntry');
+
+let password = document.getElementById('PassEntry');
 let strengthBadge = document.getElementById('StrengthDisp');
 
 // The strong and weak password Regex pattern checker
@@ -15,7 +16,7 @@ function StrengthChecker(PasswordParameter) {
     let preventionText = document.getElementById("prevention_text");
     if (strongPassword.test(PasswordParameter)) {
         strengthBadge.style.backgroundColor = "green";
-        strengthBadge.textContent  = 'Strong password ! 😁';
+        strengthBadge.textContent  = 'Strong password !';
         preventionText.textContent = "Password is perfect ! \n You can go to war.";
 
     } else if (mediumPassword.test(PasswordParameter)){
@@ -46,9 +47,53 @@ password.addEventListener("input", () => {
 
     //Incase a user clears the text, the badge is hidden again
 
-    if (password.value.length !== 0){
+    if (password.value.length !== 0) {
         strengthBadge.style.display != 'block';
     } else {
         strengthBadge.style.display = 'none';
     }
 });
+
+// Voir / Masquer le mot de passe
+$('.btn').on('click', function(){
+
+    if($(this).prev('input').attr('type') == 'password') {
+        changeInputType($(this).prev('input'), 'text');
+    } else {
+        changeInputType($(this).prev('input'), 'password');
+    }
+    return false;
+});
+
+// Voir / Masquer le mot de passe
+function changeInputType(x, type) {
+
+    if(x.prop('type') == type)
+        return x; 
+    try {
+        return x.prop('type', type);
+
+    } catch(e) {
+
+        let html = $("<div>").append(x.clone()).html();
+        let regex = /type=(")?([^"\s]+)(")?/; 
+        let tmp = $(html.match(regex) == null ? html.replace(">", ' type="' + type + '">') : html.replace(regex, 'type="' + type + '"'));
+
+        tmp.data('type', x.data('type') );
+        let events = x.data('events');
+        let cb = function(events) {
+            return function() {
+                //Bind all prior events
+                for(i in events)
+                {
+                    var y = events[i];
+                    for(j in y)
+                        tmp.bind(i, y[j].handler);
+                }
+            }
+        }(events);
+        x.replaceWith(tmp);
+        setTimeout(cb, 10); 
+        return tmp;
+    }
+}
