@@ -25,6 +25,7 @@ function StrengthChecker(PasswordParameter) {
     } else {
         strengthBadge.style.backgroundColor = 'red';
         strengthBadge.innerHTML  = 'Weak password ! <span>&#128549;</span>';
+        strengthBadge.textContent.fontcolor = "black";
         preventionText.style.color = "red";
         preventionText.textContent = "Your password is too weak ! \n You need at least a lowercase letter, an uppercase letter and a number.";
     }
