@@ -5,9 +5,21 @@ let numberMaj;
 let numberNumber;
 
 
+document.getElementById("lettre").addEventListener("click", function () {
+    document.getElementById("valueLettre").innerHTML = "Lettre:"+" "+document.getElementById("lettre").value;
+})
+document.getElementById("caractereSpe").addEventListener("click", function () {
+    document.getElementById("valueSpe").innerHTML ="Caractére spéciaux:" +" "+document.getElementById("caractereSpe").value;
+})
+document.getElementById("maj").addEventListener("click", function () {
+    document.getElementById("valueMaj").innerHTML = "Majuscule:" +" "+document.getElementById("maj").value;
+})
+document.getElementById("number").addEventListener("click", function () {
+    document.getElementById("valueNum").innerHTML = "Chiffre:" +" "+ document.getElementById("number").value;
+})
+
 document.querySelectorAll('.form-range').forEach(item => {
     item.addEventListener('click', event => {
-
         let l = document.getElementById("lettre").value;
         let m = document.getElementById("maj").value;
         let n = document.getElementById("number").value;
@@ -19,10 +31,10 @@ document.querySelectorAll('.form-range').forEach(item => {
         } else if (l > 2 && l <= 4 && m > 2 && m <= 4 && n > 2 && n <= 4 && s > 2 && s <= 4) {
             document.getElementById("picturePasswordGenerator").src = "../../image/4.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 2"
-        } else if (l > 4 && l < 6 && m > 4 && m < 6 && n > 4 && n < 6 &&  s > 4 && s < 6) {
+        } else if (l >= 4 && l <= 6 && m >= 4 && m <= 6 && n >= 4 && n <= 6 &&  s >= 4 && s <= 6) {
             document.getElementById("picturePasswordGenerator").src = "../../image/3.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 3"
-        } else if (l > 6 && l<8 && m > 6 && m <8 && n > 6 && n <8  && s > 6 && s <8 ) {
+        } else if (l >= 6 && l<=8 && m >= 6 && m <=8 && n >= 6 && n <= 8  && s >= 6 && s <= 8 ) {
             document.getElementById("picturePasswordGenerator").src = "../../image/2.png";
             document.getElementById("lvl").innerHTML = "Mot de passe niveau 4"
         }else if (l > 8 && m > 8 && n > 8 && s > 8) {
