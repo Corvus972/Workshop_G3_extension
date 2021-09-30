@@ -15,15 +15,18 @@
           }
     </style>
     <body>
-        <div id="container">
+        <div>
             <a href="menu.html" class="text-decoration-none"><i class="d-inline material-icons">arrow_back</i></a>
             <!--Section: Contact v.2-->
             <section class="mb-4">
 
                 <!--Section heading-->
-                <h2 class="h1-responsive font-weight-bold text-center my-4 m-1">Contact us</h2>
+                <h2 class="h1-responsive font-weight-bold text-center my-4 m-1" id="container">Contact us</h2>
+
                 <!--Section description-->
                 <p class="text-center w-responsive mx-auto mb-5">Need help ? Contact us here, we will reply as soon as we can</p>
+                
+                
 
                 <div class="row">
 
@@ -62,9 +65,25 @@
                             </div>
                             <!--Grid row-->
 
+                            <!--Grid row-->
+                            <div class="row m-1">
+
+                                <!--Grid column-->
+                                <div class="col-md-12" id="spinner">
+                                    <div class="md-form">
+                                        <label for="message">Copy this: <span id="captcha"></span></label>
+                                        <input type="text" required id="txtInput" rows="2" class="form-control md-textarea"></textarea>
+                                        <p id="error" class="text-danger"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+
                             <div class="text-center m-3">
                                 <button type="submit" class="w-100 btn btn-primary" >Send</button>
                             </div>
+
+                            
 
                         </form>
                     </div>
