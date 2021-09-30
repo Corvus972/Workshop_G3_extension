@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Password Reminder",
-  "description": "This extension is made to remind you to change your passwords in Chrome regularly and to generate a new one.",
-  "version": "1.0",
+  "name": "Pass War",
+  "description": "This extension have the will to help you with on the security of all your passwords. You can check if the password you use is safe or generate a new one. You can also check if your email adresses have been leaked or check if a domain is safe. More features will appear in the future.",
+  "version": "2.0",
   "browser_action": {
     "default_icon": "/image/icon.png",
     "default_popup": "/src/html/menu.html"
