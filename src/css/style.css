@@ -37,9 +37,6 @@ a {
 }
 
 .lines {
-  width: 25px;
-  height: 3px;
-  background: #596778;
   display: block;
   position: absolute;
   top: 50%;
@@ -70,16 +67,25 @@ a {
 .menu-open:checked + .menu-open-button .line-1 {
   -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
   transform: translate3d(0, 0, 0) rotate(45deg);
+  width: 25px;
+  height: 3px;
+  background: #596778;
 }
 
 .menu-open:checked + .menu-open-button .line-2 {
   -webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
   transform: translate3d(0, 0, 0) scale(0.1, 1);
+  width: 25px;
+  height: 3px;
+  background: #596778;
 }
 
 .menu-open:checked + .menu-open-button .line-3 {
   -webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
   transform: translate3d(0, 0, 0) rotate(-45deg);
+  width: 25px;
+  height: 3px;
+  background: #596778;
 }
 
 .menu {
@@ -631,7 +637,7 @@ a {
 .personax {
   margin: 1px;
 }
-.securitual-img {
+.passwar-img {
   margin-left: 50px;
 }
 .bd {
@@ -641,4 +647,10 @@ a {
 }
 .ti {
   text-indent: 5px;
+}
+.passwar-bt {
+  margin-bottom: 100px;
+}
+.passwar-img-mg {
+  margin-bottom: 20px;
 }
