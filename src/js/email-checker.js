@@ -44,7 +44,7 @@ const displayMessage = (good, data=null) => {
     myAlert[0].innerHTML = "";
 
     if(good){
-        if(data["score"] > 60 && data["result"] !== "risky"){
+        if(data["result"] !== "risky"){
             myAlert[0].className = "alert alert-success text-center"; 
             myAlert[0].innerHTML = "Reliable mail";
         } else {
